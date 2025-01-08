@@ -5,27 +5,37 @@ namespace reviewexercises
     {
         public static void Main()
         {
-            // 1
-            Exercise1();
+            // 2
+            Exercise2();
         }
 
-        public static void Exercise1()
+        public static void Exercise2()
         {
-            const string MsgHello = "Introdueix un número en segons: ";
-            const string MsgError = "Error. El número ha de ser un enter positiu.";
+            const string MsgBase = "Introdueix la base: ";
+            const string MsgHeight = "Introdueix la altura: ";
             const string MsgResult = "Resultat: ";
+            const string MsgError = "Error. El valor ha de ser positiu.";
 
-            int secondsInput = 0;
+            float baseInput = 0.0f;
+            float heightInput = 0.0f;
 
-            Console.WriteLine(MsgHello);
-            while (!int.TryParse(Console.ReadLine(), out secondsInput) || secondsInput < 0)
+            Console.WriteLine(MsgBase);
+            while (!float.TryParse(Console.ReadLine(), out baseInput) || baseInput < 0)
             {
                 Console.WriteLine();
                 Console.WriteLine(MsgError);
             }
             Console.WriteLine();
 
-            Console.WriteLine(MsgResult + MyLibrary.MyMath.SecondsToHoursAndMinutes(secondsInput));
+            Console.WriteLine(MsgHeight);
+            while (!float.TryParse(Console.ReadLine(), out heightInput) || heightInput < 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine(MsgError);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(MsgResult + MyLibrary.MyMath.);
         }
     }
 }
