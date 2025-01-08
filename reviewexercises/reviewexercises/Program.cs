@@ -5,6 +5,12 @@ namespace reviewexercises
     {
         public static void Main()
         {
+            // 1
+            Exercise1();
+        }
+
+        public static void Exercise1()
+        {
             const string MsgHello = "Introdueix un número en segons: ";
             const string MsgError = "Error. El número ha de ser un enter positiu.";
             const string MsgResult = "Resultat: ";
