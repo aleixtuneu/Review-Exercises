@@ -22,5 +22,10 @@
             return (kelvinInput - 273.15) * 9 / 5 + 32;
         }
 
+        public static double CalculateDiscount(double priceInput, double discountedPriceInput)
+        {
+            return ((priceInput - discountedPriceInput) / priceInput) * 100;
+        }
+
     }
 }
