@@ -27,5 +27,17 @@
             return ((priceInput - discountedPriceInput) / priceInput) * 100;
         }
 
+        public static string DecimalToHexadecimal(int decimalNumberInput)
+        {
+            string hexadecimalChars = "";
+
+            if (decimalNumberInput == 0)
+            {
+                return "";
+            }
+
+            return DecimalToHexadecimal(decimalNumberInput / 16) + hexadecimalChars[decimalNumberInput % 16];
+        }
+
     }
 }
