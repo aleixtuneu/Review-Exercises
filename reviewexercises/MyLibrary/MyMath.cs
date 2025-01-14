@@ -12,5 +12,10 @@
             return (celsiusInput * 9 / 5) + 32;
         }
 
+        public static double CelsiusToKelvin(double celsiusInput)
+        {
+            return celsiusInput + 273.15;
+        }
+
     }
 }

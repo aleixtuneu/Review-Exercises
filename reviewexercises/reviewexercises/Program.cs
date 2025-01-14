@@ -1,13 +1,13 @@
 ﻿using MyLibrary;
 namespace reviewexercises
 {
-    // Ex3
+    // Ex4
     public class Program
     {
         public static void Main()
         {
             const string MsgIntroduceTemperature = "Introdueix la temperatura (Cº): ";
-            const string MsgResult = "Temperatura en graus Fahrenheit (F): {0}.";
+            const string MsgResult = "Temperatura en graus Kelvin (K): {0}.";
             const string MsgError = "Error. El valor ha de ser un número.";
 
             double celsiusInput = 0;
@@ -20,7 +20,7 @@ namespace reviewexercises
             }
             Console.WriteLine();
 
-            Console.WriteLine(MsgResult, MyLibrary.MyMath.CelsiusToFahrenheit(celsiusInput));
+            Console.WriteLine(MsgResult, MyLibrary.MyMath.CelsiusToKelvin(celsiusInput));
         }
     }
 }
