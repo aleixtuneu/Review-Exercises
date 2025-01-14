@@ -39,5 +39,25 @@
             return DecimalToHexadecimal(decimalNumberInput / 16) + hexadecimalChars[decimalNumberInput % 16];
         }
 
+        public static bool ValidatePostalCode(string postalCodeInput)
+        {
+            // Comprovar si la longitud és 5
+            if (postalCodeInput.Length != 5)
+            {
+                return false;
+            }
+
+            // Comprovar si té dígits numèrics
+            foreach (char c in postalCodeInput)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
     }
 }
