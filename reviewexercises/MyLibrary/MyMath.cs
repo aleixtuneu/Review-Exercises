@@ -17,5 +17,10 @@
             return celsiusInput + 273.15;
         }
 
+        public static double KelvinToFahrenheit(double kelvinInput)
+        {
+            return (kelvinInput - 273.15) * 9 / 5 + 32;
+        }
+
     }
 }
