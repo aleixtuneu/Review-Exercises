@@ -59,5 +59,10 @@
             return true;
         }
 
+        public static double CalculateTip(double priceInput)
+        {
+            return priceInput * 20 / 100;
+        }
+
     }
 }

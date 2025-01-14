@@ -1,19 +1,26 @@
 ﻿using MyLibrary;
 namespace reviewexercises
 {
-    // Ex8
+    // Ex9
     public class Program
     {
         public static void Main()
         {
-            const string MsgInput = "Introdueix un codi postal: ";
-            const string MsgOk = "És un codi postal.";
-            const string MsgKo = "No és un codi postal.";
+            const string MsgIntroducePrice = "Introdueix el preu: ";
+            const string MsgError = "Error. El preu ha de ser un número positiu.";
+            const string Msgresult = "20% de propina a deixar: {0}€.";
 
-            string postalCodeInput = "";
+            double priceInput = 0;
 
-            Console.WriteLine(MsgInput);
-            Console.WriteLine(MyLibrary.MyMath.ValidatePostalCode(postalCodeInput) ? MsgOk : MsgKo);
+            Console.WriteLine(MsgIntroducePrice);
+            while (!double.TryParse(Console.ReadLine(), out priceInput) || priceInput < 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine(MsgError);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(Msgresult, MyLibrary.MyMath.CalculateTip(priceInput));
 
         }
     }
