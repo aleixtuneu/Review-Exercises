@@ -35,7 +35,7 @@ namespace reviewexercises
             }
             Console.WriteLine();
 
-            Console.WriteLine(MsgResult + MyLibrary.MyMath.);
+            Console.WriteLine(MsgResult + MyLibrary.MyMath.CalculateTriangleArea(baseInput, heightInput));
         }
     }
 }
