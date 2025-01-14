@@ -6,5 +6,11 @@
         {
             return baseInput * heightInput / 2;
         }
+
+        public static double CelsiusToFahrenheit(double celsiusInput)
+        {
+            return (celsiusInput * 9 / 5) + 32;
+        }
+
     }
 }

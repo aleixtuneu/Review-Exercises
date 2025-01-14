@@ -1,41 +1,26 @@
 ﻿using MyLibrary;
 namespace reviewexercises
 {
+    // Ex3
     public class Program
     {
         public static void Main()
         {
-            // 2
-            Exercise2();
-        }
+            const string MsgIntroduceTemperature = "Introdueix la temperatura (Cº): ";
+            const string MsgResult = "Temperatura en graus Fahrenheit (F): {0}.";
+            const string MsgError = "Error. El valor ha de ser un número.";
 
-        public static void Exercise2()
-        {
-            const string MsgBase = "Introdueix la base: ";
-            const string MsgHeight = "Introdueix la altura: ";
-            const string MsgResult = "Resultat: ";
-            const string MsgError = "Error. El valor ha de ser positiu.";
+            double celsiusInput = 0;
 
-            float baseInput = 0.0f;
-            float heightInput = 0.0f;
-
-            Console.WriteLine(MsgBase);
-            while (!float.TryParse(Console.ReadLine(), out baseInput) || baseInput < 0)
+            Console.WriteLine(MsgIntroduceTemperature);
+            while (!double.TryParse(Console.ReadLine(), out celsiusInput))
             {
                 Console.WriteLine();
                 Console.WriteLine(MsgError);
             }
             Console.WriteLine();
 
-            Console.WriteLine(MsgHeight);
-            while (!float.TryParse(Console.ReadLine(), out heightInput) || heightInput < 0)
-            {
-                Console.WriteLine();
-                Console.WriteLine(MsgError);
-            }
-            Console.WriteLine();
-
-            Console.WriteLine(MsgResult + MyLibrary.MyMath.CalculateTriangleArea(baseInput, heightInput));
+            Console.WriteLine(MsgResult, MyLibrary.MyMath.CelsiusToFahrenheit(celsiusInput));
         }
     }
 }
