@@ -64,5 +64,15 @@
             return (priceInput * 20 / 100) / peopleCountInput;
         }
 
+        public static int CountDigits(int numberInput)
+        {
+            if (numberInput == 0)
+            {
+                return 0;
+            }
+
+            return 1 + CountDigits(numberInput / 10);
+        }
+
     }
 }
