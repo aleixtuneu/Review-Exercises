@@ -59,9 +59,9 @@
             return true;
         }
 
-        public static double CalculateTip(double priceInput)
+        public static double CalculateTip(double priceInput, int peopleCountInput)
         {
-            return priceInput * 20 / 100;
+            return (priceInput * 20 / 100) / peopleCountInput;
         }
 
     }
