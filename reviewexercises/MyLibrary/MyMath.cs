@@ -2,13 +2,17 @@
 {
     public static class MyMath
     {
-        public static string SecondsToHoursAndMinutes(int secondsInput)
+        public static bool IsSorted(int[] arrayInput)
         {
-            int hours = secondsInput / 3600;
-            int minutes = (secondsInput % 3600)/60;
-            int seconds = secondsInput % 60;
+            for (int i = 0; i < arrayInput.Length - 1; i++)
+            {
+                if (arrayInput[i] > arrayInput[i+1])
+                {
+                    return false;
+                }
+            }
 
-            return $"{hours} hores, {minutes} minuts, {seconds} segons.";
+            return true;
         }
     }
 }
